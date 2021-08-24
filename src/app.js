@@ -6,7 +6,7 @@ const db = require('../src/infra/sqlite-db')
 
 //Config
 const app = express()
-const port = 3050;
+const port = process.env.port || 3050;
 
 //Middlewares
 app.use(express.json())
@@ -14,9 +14,11 @@ app.use(express.json())
 
 //Rota
 const RotaCardapio = require('../src/Controller/CardapioController')
+const RotaComentarios = require('../src/Controller/Avalicao-controller')
 
 //Uso da rota
-RotaCardapio(app,db)
+RotaCardapio(app,db);
+RotaComentarios(app,db)
 
 //Listen
 app.listen(port,()=>{

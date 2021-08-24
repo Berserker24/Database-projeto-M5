@@ -1,4 +1,4 @@
-const AssessmentsDao = require("../Dao/Avaliacao-Dao");
+const AssessmentsDao = require("../DAO/Avaliacao-Dao");
 const AssessmentsModel = require("../Model/Avaliacao-model");
 //importar a model que ainda nem foi criada
 
