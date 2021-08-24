@@ -16,9 +16,14 @@ app.use(express.json())
 const RotaCardapio = require('../src/Controller/CardapioController')
 const RotaComentarios = require('../src/Controller/Avalicao-controller')
 
+const RotaCadastro =require('../src/Controller/Cadastro.controller')
+
+
 //Uso da rota
 RotaCardapio(app,db);
 RotaComentarios(app,db)
+
+RotaCadastro(app,db)
 
 //Listen
 app.listen(port,()=>{
